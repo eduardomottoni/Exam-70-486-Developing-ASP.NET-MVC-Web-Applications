@@ -16,11 +16,11 @@ The expected output is:
 
 After reboting, you can run **Get-Job** to verify the status
 
-Now I will set the PowerShell script, it will open the excel timesheet on startup:
->$FilePath = "C:\GitHub\Exam-70-486-Developing-ASP.NET-MVC-Web-Applications\Private\horariosestudo.xlsx"
->$Excel = New-Object -ComObject Excel.Application
->$Excel.Visible = $true
->$Workbook = $Excel.Workbooks.Open($FilePath)
+Now I will set the PowerShell script, it will open the excel timesheet on startup:_
+_$FilePath = "C:\GitHub\Exam-70-486-Developing-ASP.NET-MVC-Web-Applications\Private\horariosestudo.xlsx"_
+_$Excel = New-Object -ComObject Excel.Application_
+_$Excel.Visible = $true_
+_$Workbook = $Excel.Workbooks.Open($FilePath)_
 
 When I try open it, I receive a error
 
