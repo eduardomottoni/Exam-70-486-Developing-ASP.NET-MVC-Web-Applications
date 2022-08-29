@@ -18,11 +18,11 @@ After reboting, you can run **Get-Job** to verify the status
 
 Now I will set the PowerShell script, it will open the excel timesheet on startup:
 >$FilePath = "C:\GitHub\Exam-70-486-Developing-ASP.NET-MVC-Web-Applications\Private\horariosestudo.xlsx"
-$Excel = New-Object -ComObject Excel.Application
-$Excel.Visible = $true
-$Workbook = $Excel.Workbooks.Open($FilePath)
+>$Excel = New-Object -ComObject Excel.Application
+>$Excel.Visible = $true
+>$Workbook = $Excel.Workbooks.Open($FilePath)
 
-But it gives me this error
+When I try open it, I receive a error
 
 ![image](https://user-images.githubusercontent.com/56644658/187307703-f944af74-6f91-48a2-aeea-0cd4b189224f.png)
 
