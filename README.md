@@ -4,11 +4,31 @@ To organize the progression, I will just setup a Python script to initialize an 
 
 In the PowerShell terminal, I will just run:
 > $trigger = New-JobTrigger -AtStartup -RandomDelay 00:00:30
+
 To set up a new 'trigger', at startup (_-AtStartup parameter_), with a delay of 30 seconds to avoid **race condition**
 
 Now, I will relate the _trigger_ with the _file_, just run the command:
-'''
-Register-ScheduledJob -Trigger $trigger -FilePath C:\GitHub\Exam-70-486-Developing-ASP.NET-MVC-Web-Applications\Public\inicializacao.ps1 -Name GetBatteryStatus
-'''
+
+> Register-ScheduledJob -Trigger $trigger -FilePath C:\GitHub\Exam-70-486-Developing-ASP.NET-MVC-Web-Applications\Public\inicializacao.ps1 -Name GetBatteryStatus
+
+The expected output is:
+![image](https://user-images.githubusercontent.com/56644658/187301945-1715295c-1344-4908-a913-4fd16ad13943.png)
+
+After reboting, you can run **Get-Job** to verify the status
+
+Now I will set the PowerShell script, it will open the excel timesheet on startup:
+>$FilePath = "C:\GitHub\Exam-70-486-Developing-ASP.NET-MVC-Web-Applications\Private\horariosestudo.xlsx"
+$Excel = New-Object -ComObject Excel.Application
+$Excel.Visible = $true
+$Workbook = $Excel.Workbooks.Open($FilePath)
+
+But it gives me this error
+![image](https://user-images.githubusercontent.com/56644658/187307703-f944af74-6f91-48a2-aeea-0cd4b189224f.png)
+
+I just set the **Execution Policy** to AllSigned, and set a new signature, then I sign the script and run it. 
 
 
+References:
+>https://stackoverflow.com/questions/37665118/how-to-open-excel-workbook-from-powershell-for-automation
+>https://devblogs.microsoft.com/scripting/use-powershell-to-create-job-that-runs-at-startup/
+>https://adamtheautomator.com/how-to-sign-powershell-script/
