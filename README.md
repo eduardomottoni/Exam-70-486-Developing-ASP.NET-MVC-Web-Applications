@@ -23,6 +23,7 @@ $Excel.Visible = $true
 $Workbook = $Excel.Workbooks.Open($FilePath)
 
 But it gives me this error
+
 ![image](https://user-images.githubusercontent.com/56644658/187307703-f944af74-6f91-48a2-aeea-0cd4b189224f.png)
 
 I just set the **Execution Policy** to AllSigned, and set a new signature, then I sign the script and run it. 
@@ -31,4 +32,5 @@ I just set the **Execution Policy** to AllSigned, and set a new signature, then 
 References:
 >https://stackoverflow.com/questions/37665118/how-to-open-excel-workbook-from-powershell-for-automation
 >https://devblogs.microsoft.com/scripting/use-powershell-to-create-job-that-runs-at-startup/
+>https://docs.microsoft.com/pt-br/powershell/module/microsoft.powershell.security/set-authenticodesignature?view=powershell-7.2
 >https://adamtheautomator.com/how-to-sign-powershell-script/
