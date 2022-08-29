@@ -1,6 +1,6 @@
 # Exam-70-486-Developing-ASP.NET-MVC-Web-Applications
 
-##Setup a script to open a timesheet on the Windows StartUp
+## Setup a script to open a timesheet on the Windows StartUp
 
 To organize the progression, I will just setup a Python script to initialize an excel timesheet on windows startup
 
