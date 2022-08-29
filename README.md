@@ -16,7 +16,8 @@ The expected output is:
 
 After reboting, you can run **Get-Job** to verify the status
 
-Now I will set the PowerShell script, it will open the excel timesheet on startup:_
+Now I will set the PowerShell script, it will open the excel timesheet on startup:
+
 _$FilePath = "C:\GitHub\Exam-70-486-Developing-ASP.NET-MVC-Web-Applications\Private\horariosestudo.xlsx"_
 _$Excel = New-Object -ComObject Excel.Application_
 _$Excel.Visible = $true_
