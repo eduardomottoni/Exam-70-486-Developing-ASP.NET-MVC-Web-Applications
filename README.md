@@ -12,7 +12,7 @@ To set up a new 'trigger', at startup (_-AtStartup parameter_), with a delay of 
 
 Now, I will relate the _trigger_ with the _file_, just run the command:
 ```
-Register-ScheduledJob -Trigger $trigger -FilePath C:\GitHub\Exam-70-486-Developing-ASP.NET-MVC-Web-Applications\Public\inicializacao.ps1 -Name GetBatteryStatus
+Register-ScheduledJob -Trigger $trigger -FilePath C:\GitHub\Exam-70-486-Developing-ASP.NET-MVC-Web-Applications\Public\inicializacao.ps1 -Name StartingExcel
 ```
 The expected output is:
 ![image](https://user-images.githubusercontent.com/56644658/187301945-1715295c-1344-4908-a913-4fd16ad13943.png)
