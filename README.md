@@ -2,7 +2,7 @@
 
 ## Setup a script to open a timesheet on the Windows StartUp
 
-To organize the progression, I will just setup a Python script to initialize an excel timesheet on windows startup
+To organize the progression, I will just setup a PowerShell script to initialize an excel timesheet on windows startup
 
 In the PowerShell terminal, I will just run:
 ```
@@ -17,7 +17,7 @@ Register-ScheduledJob -Trigger $trigger -FilePath C:\GitHub\Exam-70-486-Developi
 The expected output is:
 ![image](https://user-images.githubusercontent.com/56644658/187301945-1715295c-1344-4908-a913-4fd16ad13943.png)
 
-After reboting, you can run **Get-Job** to verify the status
+After rebooting, you can run **Get-Job** to verify the status
 
 Now I will set the PowerShell script, it will open the excel timesheet on startup:
 ```
@@ -26,7 +26,7 @@ $Excel = New-Object -ComObject Excel.Application
 $Excel.Visible = $true
 $Workbook = $Excel.Workbooks.Open($FilePath)
 ```
-When I try open it, I receive a error
+When I try to open it, I received an error
 
 ![image](https://user-images.githubusercontent.com/56644658/187307703-f944af74-6f91-48a2-aeea-0cd4b189224f.png)
 
