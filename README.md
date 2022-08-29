@@ -3,14 +3,15 @@
 To organize the progression, I will just setup a Python script to initialize an excel timesheet on windows startup
 
 In the PowerShell terminal, I will just run:
-> $trigger = New-JobTrigger -AtStartup -RandomDelay 00:00:30
-
+```
+$trigger = New-JobTrigger -AtStartup -RandomDelay 00:00:30
+```
 To set up a new 'trigger', at startup (_-AtStartup parameter_), with a delay of 30 seconds to avoid **race condition**
 
 Now, I will relate the _trigger_ with the _file_, just run the command:
-
-> Register-ScheduledJob -Trigger $trigger -FilePath C:\GitHub\Exam-70-486-Developing-ASP.NET-MVC-Web-Applications\Public\inicializacao.ps1 -Name GetBatteryStatus
-
+```
+Register-ScheduledJob -Trigger $trigger -FilePath C:\GitHub\Exam-70-486-Developing-ASP.NET-MVC-Web-Applications\Public\inicializacao.ps1 -Name GetBatteryStatus
+```
 The expected output is:
 ![image](https://user-images.githubusercontent.com/56644658/187301945-1715295c-1344-4908-a913-4fd16ad13943.png)
 
@@ -23,7 +24,6 @@ $Excel = New-Object -ComObject Excel.Application
 $Excel.Visible = $true
 $Workbook = $Excel.Workbooks.Open($FilePath)
 ```
-
 When I try open it, I receive a error
 
 ![image](https://user-images.githubusercontent.com/56644658/187307703-f944af74-6f91-48a2-aeea-0cd4b189224f.png)
